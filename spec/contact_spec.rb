@@ -9,4 +9,10 @@ describe(Contact) do
       expect(new_contact.name()).to(eq("Rafael"))
     end
   end
+
+  describe(".all") do
+    it("is empty at first") do
+      expect(Contact.all()).to(eq([]))
+    end
+  end
 end

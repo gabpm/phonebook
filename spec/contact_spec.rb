@@ -1,13 +1,12 @@
 require("rspec")
-require("contac")
+require("contact")
 
 describe(Contact) do
-  before() do
-    contact.clear()
-  end
-  describe("#save") do
-    it("saves contact name") do
+
+  describe("#name") do
+    it("returns the name of the contact") do
       new_contact = Contact.new("Rafael")
-      expect(new_contact.save()).to(eq([new_contact]))
+      expect(new_contact.name()).to(eq("Rafael"))
     end
   end
+end

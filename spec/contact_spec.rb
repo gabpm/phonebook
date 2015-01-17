@@ -15,4 +15,12 @@ describe(Contact) do
       expect(Contact.all()).to(eq([]))
     end
   end
+
+  describe("#save") do
+    it("adds contact name to an array of contacts") do
+      test_contact = Contact.new("Rafael")
+      test_contact.save()
+      expect(Contact.all()).to(eq([test_contact]))
+    end
+  end
 end
